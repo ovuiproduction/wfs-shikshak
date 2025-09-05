@@ -4,73 +4,185 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>शिक्षक म्हणजे कोण?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: "Noto Serif Devanagari", serif;
-      background: #f9f6f2;
-      color: #2c2c2c;
-      line-height: 1.8;
+    * {
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: "Noto Sans Devanagari", sans-serif;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      color: #212529;
+      line-height: 1.7;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
     .container {
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
+      max-width: 700px;
+      margin: 0 auto;
+      background: white;
+      padding: 60px 50px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
     h1 {
       text-align: center;
-      color: #a52a2a;
+      color: #d63384;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 50px;
+      position: relative;
     }
-    p {
-      margin: 10px 0;
-      font-size: 1.2rem;
+
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, #d63384, #fd7e14);
+      border-radius: 2px;
     }
+
+    .stanza {
+      margin-bottom: 35px;
+      padding: 30px;
+      background: #f8f9fa;
+      border-left: 4px solid #fd7e14;
+      border-radius: 8px;
+      font-size: 1.25rem;
+      font-weight: 400;
+      transition: all 0.3s ease;
+    }
+
+    .stanza:hover {
+      background: #fff3cd;
+      border-left-color: #d63384;
+      transform: translateX(5px);
+    }
+
+    .highlight {
+      color: #d63384;
+      font-weight: 600;
+    }
+
     .author {
-      text-align: right;
-      margin-top: 30px;
-      font-style: italic;
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      border-radius: 8px;
+      font-size: 1.1rem;
+      color: #6c757d;
+      font-weight: 500;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 15px;
+      }
+
+      .container {
+        padding: 40px 30px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+      }
+
+      .stanza {
+        font-size: 1.1rem;
+        padding: 25px 20px;
+        margin-bottom: 25px;
+      }
+
+      .stanza:hover {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      .stanza {
+        font-size: 1rem;
+        padding: 20px 15px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>शिक्षक म्हणजे कोण?</h1>
+    
+    <div class="stanza">
+      कधी रागावून, कधी प्रेमाने, तर कधी मारून सुद्धा<br>
+      ज्यांनी जगायला शिकवलं – ते <span class="highlight">शिक्षक</span>.
+    </div>
 
-    <p>कधी रागावून, कधी प्रेमाने, तर कधी मारून सुद्धा<br>
-    ज्यांनी जगायला शिकवलं – ते <b>शिक्षक</b>.</p>
+    <div class="stanza">
+      या जगात जगत असताना स्वतःच्या अंतकरणात<br>
+      आणि दुनियेच्या पसाऱ्यात ज्यांनी बघायला शिकवलं – ते <span class="highlight">शिक्षक</span>.
+    </div>
 
-    <p>या जगात जगत असताना स्वतःच्या अंतकरणात<br>
-    आणि दुनियेच्या पसाऱ्यात ज्यांनी बघायला शिकवलं – ते <b>शिक्षक</b>.</p>
+    <div class="stanza">
+      ज्ञानाचे बीज पेरता पेरता संस्कारांचे खत टाकून<br>
+      ज्यांनी नभाकडे झेप घ्यायला शिकवलं – ते <span class="highlight">शिक्षक</span>.
+    </div>
 
-    <p>ज्ञानाचे बीज पेरता पेरता संस्कारांचे खत टाकून<br>
-    ज्यांनी नभाकडे झेप घ्यायला शिकवलं – ते <b>शिक्षक</b>.</p>
+    <div class="stanza">
+      यशाची शिखरे ओलांडताना नम्रतेचा झरा<br>
+      आणि माणुसकीचा ओलावा कसा मनात पाझरत ठेवावा –<br>
+      हे ज्यांनी शिकवलं ते <span class="highlight">शिक्षक</span>.
+    </div>
 
-    <p>यशाची शिखरे ओलांडताना नम्रतेचा झरा<br>
-    आणि माणुसकीचा ओलावा कसा मनात पाझरत ठेवावा –<br>
-    हे ज्यांनी शिकवलं ते <b>शिक्षक</b>.</p>
+    <div class="stanza">
+      कधी गर्वाचा वा अहंकाराचा स्पर्श झालाच तर,<br>
+      त्या अहंकाराचा वध करून कसं निर्मळ निखळ रहावं –<br>
+      हे ज्यांनी शिकवलं ते <span class="highlight">शिक्षक</span>.
+    </div>
 
-    <p>कधी गर्वाचा वा अहंकाराचा स्पर्श झालाच तर,<br>
-    त्या अहंकाराचा वध करून कसं निर्मळ निखळ रहावं –<br>
-    हे ज्यांनी शिकवलं ते <b>शिक्षक</b>.</p>
+    <div class="stanza">
+      इतिहासाला जिवंत करून शूर वीरांचे संदर्भ<br>
+      आणि रणरागिनींच्या गोष्टी सांगून ज्यांनी देशाचं भविष्य घडवलं –<br>
+      ते <span class="highlight">शिक्षक</span>.
+    </div>
 
-    <p>इतिहासाला जिवंत करून शूर वीरांचे संदर्भ<br>
-    आणि रणरागिनींच्या गोष्टी सांगून ज्यांनी देशाचं भविष्य घडवलं –<br>
-    ते <b>शिक्षक</b>.</p>
+    <div class="stanza">
+      शिक्षक म्हणजे तरी कोण हो?<br>
+      ज्याने स्वतःचं आयुष्य अंधकारात ठेवून<br>
+      कित्येकांचं आयुष्य प्रकाशमय केलं –<br>
+      तो तेजस्वी तळपता सूर्य म्हणजे <span class="highlight">शिक्षक</span>.
+    </div>
 
-    <p>शिक्षक म्हणजे तरी कोण हो?<br>
-    ज्याने स्वतःचं आयुष्य अंधकारात ठेवून<br>
-    कित्येकांचं आयुष्य प्रकाशमय केलं –<br>
-    तो तेजस्वी तळपता सूर्य म्हणजे <b>शिक्षक</b>.</p>
-
-    <p>शिक्षक म्हणजे कोण?<br>
-    पडणाऱ्याला उठायला, रांगणाऱ्याला चालायला,<br>
-    चालणाऱ्याला पळायला, पळणाऱ्याला उडायला<br>
-    आणि उडणाऱ्याचे पाय जमिनीवर ठेवायला<br>
-    शिकवतो तो <b>शिक्षक</b>.</p>
+    <div class="stanza">
+      शिक्षक म्हणजे कोण?<br>
+      पडणाऱ्याला उठायला, रांगणाऱ्याला चालायला,<br>
+      चालणाऱ्याला पळायला, पळणाऱ्याला उडायला<br>
+      आणि उडणाऱ्याचे पाय जमिनीवर ठेवायला<br>
+      शिकवतो तो <span class="highlight">शिक्षक</span>.
+    </div>
 
     <div class="author">© 2025 WFS(Words From Soul)</div>
   </div>
